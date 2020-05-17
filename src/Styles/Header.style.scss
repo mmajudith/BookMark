@@ -1,0 +1,80 @@
+
+@import "./mixinsVariables.scss";
+
+.header-container{
+    width: 100%;
+    margin: auto auto;
+    .header-nav{
+        @include displayFlex;
+        ul li{
+            float: left;
+            padding: 10px 10px;
+            text-transform: uppercase;
+            a{
+                text-decoration: none;
+                color: lighten($VeryDarkBlue, 20);
+                letter-spacing: 1px;
+                font-size: 12px;
+                font-weight: 600;
+                &:hover{    
+                        color: lighten($SoftRed, 10);
+                }
+            }
+            .login{
+                background-color: $SoftRed;
+                color: $White;
+                padding: 10px 25px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+                &:hover{
+                    background-color: $White;
+                    border: 2px solid $SoftRed;
+                    color: $SoftRed;
+                }
+            }
+        }
+        .open{
+            display: none;
+            width: 25px;
+        }
+        .close{
+            display: none;
+            width: 25px;
+        }
+    }
+    .simple-illust-wrapper{
+        @include displayFlex;
+        width: 95%;
+        .simp-bookmark{
+            margin-left: 100px;
+            margin-top: 80px;
+            h1{
+                color: $VeryDarkBlue;
+                font-size: 48px;
+                font-weight: 700;
+            }
+            p{
+                @include letterSpa;
+                padding: 20px 65px 10px 0px;
+            }
+            .chrome-btn{
+                @include btn-styles;
+                &:hover{
+                    background-color: $White;
+                    border: 2px solid $SoftBlue;
+                    color: $SoftBlue;
+                    cursor: pointer;
+                }
+            }
+            .firefox-btn{
+                @include btn-styles;
+                background-color: $White;
+                color: $VeryDarkBlue;
+                &:hover{
+                    border: 2px solid $VeryDarkBlue;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

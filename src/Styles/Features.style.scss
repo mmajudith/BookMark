@@ -1,0 +1,104 @@
+@import "./mixinsVariables.scss";
+
+.features-wrapper{
+    width: 100%;
+    margin: auto auto;
+    h2{
+        color: $VeryDarkBlue;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .obj{
+        width: 35%;
+        margin: 40px auto;
+        text-align: center;
+        p{
+            @include letterSpa;
+            margin: 20px 0px;
+        }
+    }
+    .search {
+        width: 50%;
+        margin: 60px auto ;
+        text-align: center;
+        border-bottom: 1px solid lighten($GrayishBlue, 30);
+        padding: 30px 0px;
+        font-weight: 600;
+        span{
+            padding: 26px 54px;
+            &:hover{
+                color: $SoftRed;
+                cursor: pointer;
+            }
+        }
+        .mo{
+            color: lighten($VeryDarkBlue, 10);
+            border-bottom: 4px solid $SoftRed;
+            
+        }
+    }
+    .info-one{
+        @include displayFlex;
+        .info{
+            margin-top: 70px;
+            margin-left: 150px;
+            p{
+                @include letterSpa;
+                margin: 20px 0px;
+            }
+            button{
+                @include btn-styles;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .info-two-wrapper{
+        display: none; 
+        .info-two{
+            @include displayFlex;
+            .info{
+                margin-top: 70px;
+                margin-left: 190px;
+                p{
+                    @include letterSpa;
+                    margin: 20px 0px;
+                }
+                button{
+                    @include btn-styles;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+    .info-three-wrapper{
+        display: none;
+        .info-three{
+            @include displayFlex;
+            .info{
+                margin-top: 70px;
+                margin-left: 250px;
+                p{
+                    @include letterSpa;
+                    margin: 20px 0px;
+                }
+                button{
+                    @include btn-styles;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            } 
+        }
+    }
+    
+}
+
+.tr{
+    color: lighten($VeryDarkBlue, 10);
+    border-bottom: 4px solid $SoftRed;
+}

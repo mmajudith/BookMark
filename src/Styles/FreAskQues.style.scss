@@ -1,0 +1,91 @@
+
+@import "./mixinsVariables.scss";
+
+.fre-ask-que-wrapper{
+    width: 100%;
+    margin: 130px auto;
+    .align-center{
+        width: 35%;
+        margin: 40px auto;
+        text-align: center;
+        h2{
+            color: $VeryDarkBlue;
+            font-weight: 700;
+            font-size: 25px;
+        }
+        p{
+            @include letterSpa;
+            margin: 20px 0px ;
+            
+        }
+    }
+    .que-answer-wrapper{
+        width: 35%;
+        margin: 40px auto;
+        .flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    }
+    .Bmark-explaned, .req-browser, .mobile-app,.chromium {
+        border-top: 1px solid lighten($GrayishBlue, 30);
+        padding: 20px 0px;
+        cursor: pointer;
+        .que{
+            color: lighten($VeryDarkBlue, 10);
+            font-weight: 700;
+            &:hover{
+                color: $SoftRed;
+            }
+        }
+        .ans{
+            display: none;
+        }
+        .arrowDown{
+            display: none;
+        }
+    }
+    .chromium{
+        border-bottom: 1px solid lighten($GrayishBlue, 30);
+    }
+    .info-btn {
+        margin-top: 30px;
+        text-align: center;
+        button{
+            @include btn-styles;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.Bmark-explaned-tog, .req-browser-tog, .mobile-app-tog, .chromium-tog{
+    cursor: pointer;
+    border-top: 1px solid lighten($GrayishBlue, 30);
+    padding: 20px 0px;
+    .que{
+        color: lighten($VeryDarkBlue, 10);
+        font-weight: 700;
+    }
+    .ans{
+        line-height: 25px;
+        letter-spacing: 1px;
+        margin: 20px 0px ;
+        display: block;
+    }
+    .arrowUp{
+        display: none;
+    }
+    .arrowDown{
+        font-size: 20px;
+        color: $SoftRed;
+        display: block;
+    }
+    
+}
+
+.chromium-tog{
+    border-bottom: 1px solid lighten($GrayishBlue, 30);
+}

@@ -1,0 +1,34 @@
+
+//Variables colors
+$SoftRed:hsl(0, 94%,66%);
+$SoftBlue: hsl(231, 69%, 60%);
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+$White: #FFF;
+
+
+// Mixins
+@mixin displayFlex {
+    width: 80%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+@mixin btn-styles{
+    padding:10px 20px;
+    margin: 10px 15px 0px 0px;
+    border: none;
+    background-color: $SoftBlue;
+    color:$White;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+@mixin letterSpa{
+    line-height: 20px;
+    letter-spacing: 1px;
+}
