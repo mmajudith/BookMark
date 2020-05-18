@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../images/logo-bookmark-two.svg'
-import twitter from '../images/icon-twitter.svg'
+
 import { FaFacebookSquare } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
 
