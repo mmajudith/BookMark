@@ -1,38 +1,44 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import arrow from '../images/icon-arrow.svg'
 import { FaChevronUp } from 'react-icons/fa' 
 import '../Styles/FreAskQues.style.scss'
 
 function FreAskQues() {
 
+    const bMarkRef = useRef(null)
+    const reqRef = useRef(null)
+    const mobileAppRef = useRef(null)
+    const chromiumRef = useRef(null)
+
+    const bookMarkConRef = useRef(null)
+    const reqBrowserConRef = useRef(null)
+    const mobileAppConRef = useRef(null)
+    const chromiumConRef = useRef(null)
+
     useEffect(() =>{
-        const BmarkEx = document.querySelector('.Bmark-explaned')
-        const req = document.querySelector('.req-browser')
-        const mobileApp = document.querySelector('.mobile-app')
-        const chromium = document.querySelector('.chromium')
 
         //BookMark toggle
-        document.querySelector('.Bookmark-wrapper').addEventListener('click', () =>{
-            BmarkEx.classList.toggle('Bmark-explaned')
-            BmarkEx.classList.toggle('Bmark-explaned-tog')
+        bookMarkConRef.current.addEventListener('click', () =>{
+            bMarkRef.current.classList.toggle('Bmark-explaned')
+            bMarkRef.current.classList.toggle('Bmark-explaned-tog')
         })
 
         //Request Browser toggle
-        document.querySelector('.req-browser-wrapper').addEventListener('click', () =>{
-            req.classList.toggle('req-browser')
-            req.classList.toggle('req-browser-tog')
+        reqBrowserConRef.current.addEventListener('click', () =>{
+            reqRef.current.classList.toggle('req-browser')
+            reqRef.current.classList.toggle('req-browser-tog')
         })
         
         //Mobile App toggle
-        document.querySelector('.mobile-app-wrapper').addEventListener('click', () =>{
-            mobileApp.classList.toggle('mobile-app')
-            mobileApp.classList.toggle('mobile-app-tog')
+        mobileAppConRef.current.addEventListener('click', () =>{
+            mobileAppRef.current.classList.toggle('mobile-app')
+            mobileAppRef.current.classList.toggle('mobile-app-tog')
         })
 
         //Chromuim toggle
-        document.querySelector('.chromium-wrapper').addEventListener('click', () =>{
-            chromium.classList.toggle('chromium')
-            chromium.classList.toggle('chromium-tog')
+        chromiumConRef.current.addEventListener('click', () =>{
+            chromiumRef.current.classList.toggle('chromium')
+            chromiumRef.current.classList.toggle('chromium-tog')
         })
     })
 
@@ -50,8 +56,8 @@ function FreAskQues() {
 
         <div className="que-answer-wrapper">
 
-            <div className="Bookmark-wrapper">
-                <div className="Bmark-explaned">
+            <div ref={bookMarkConRef} className="Bookmark-wrapper">
+                <div ref={bMarkRef} className="Bmark-explaned">
                     <div className="flex">
                         <p className="que">What is Bookmark?</p>
                         <div>
@@ -65,8 +71,8 @@ function FreAskQues() {
                 </div>
             </div>
 
-            <div className="req-browser-wrapper">
-                <div className="req-browser">
+            <div ref={reqBrowserConRef} className="req-browser-wrapper">
+                <div ref={reqRef} className="req-browser">
                     <div className="flex">
                         <p className="que">How can I request a new browser?</p>
                         <div>
@@ -82,8 +88,8 @@ function FreAskQues() {
                 </div>
             </div>
 
-            <div className="mobile-app-wrapper">
-                <div className="mobile-app">
+            <div ref={mobileAppConRef} className="mobile-app-wrapper">
+                <div ref={mobileAppRef} className="mobile-app">
                     <div className="flex">
                         <p className="que"> Is there a mobile app?</p>
                         <div>
@@ -98,8 +104,8 @@ function FreAskQues() {
                 </div>
             </div>
 
-            <div className="chromium-wrapper">
-                <div className="chromium">
+            <div ref={chromiumConRef} className="chromium-wrapper">
+                <div ref={chromiumRef} className="chromium">
                     <div className="flex">
                         <p className="que">What about other Chromium browsers?</p>
                         <div>

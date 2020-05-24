@@ -23,9 +23,10 @@ footer{
                     &:hover{    
                         color: lighten($SoftRed, 10);
                         cursor: pointer;
-                    }
+                }    
             }
         }
+        
         .facebook{
             margin-right: 30px ;
         }
@@ -39,6 +40,34 @@ footer{
             }
         }
     }
+    @include mQ(1256px){
+        .footer-nav{
+            .list-items{
+                padding: 0px 50px 10px 0px;
+            }
+        }
+    }
+    @include mQ(797px){
+        .footer-nav{
+            .list-items{
+                ul li{
+                    float: none;
+                    padding: 15px 0px 15px 55px;
+                    color: $White;
+                }
+            }    
+        }
+    }
+    
+    @include mQ(795px){
+        .footer-nav{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
+    
     .attribution { 
         font-size: 13px;
         text-align: center;
@@ -46,4 +75,6 @@ footer{
         color: $White; 
     }
     .attribution a { color: $GrayishBlue; }
+    
 }
+

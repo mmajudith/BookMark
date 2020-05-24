@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react' 
 import illust from '../images/illustration-features-tab-1.svg'
 import illust2 from '../images/illustration-features-tab-2.svg'
 import illust3 from '../images/illustration-features-tab-3.svg'
@@ -6,32 +6,44 @@ import '../Styles/Features.style.scss'
 
 function Features() {
 
+    const simBookRef = useRef(null)
+    const easyShareRef = useRef(null)
+    const speSearchRef = useRef(null)
+
+    const infoOneRef = useRef(null)
+    const infoTwoRef = useRef(null)
+    const infoThreeRef = useRef(null)
+
     const InteSearch = () =>{
-        document.querySelector('.sim-book').classList.remove('mo')
-        document.querySelector('.easy-share').classList.remove('tr')
-        document.querySelector('.spe-search').classList.add('tr')
-        document.querySelector('.info-one-wrapper').style.display = 'none'
-        document.querySelector('.info-three-wrapper').style.display = 'none'
-        document.querySelector('.info-two-wrapper').style.display = 'block'
+        simBookRef.current.classList.remove('mo')
+        easyShareRef.current.classList.remove('tr')
+        speSearchRef.current.classList.add('tr')
+        
+        infoOneRef.current.style.display = 'none'
+        infoThreeRef.current.style.display = 'none'
+        infoTwoRef.current.style.display = 'block'
         
     }
 
     const easySharing = ()=>{
-        document.querySelector('.spe-search').classList.remove('tr')
-        document.querySelector('.sim-book').classList.remove('mo')
-        document.querySelector('.easy-share').classList.add('tr')
-        document.querySelector('.info-two-wrapper').style.display = 'none'
-        document.querySelector('.info-one-wrapper').style.display = 'none'
-        document.querySelector('.info-three-wrapper').style.display = 'block'
+        speSearchRef.current.classList.remove('tr')
+        simBookRef.current.classList.remove('mo')
+        easyShareRef.current.classList.add('tr')
+
+        infoOneRef.current.style.display = 'none'
+        infoTwoRef.current.style.display = 'none'
+        infoThreeRef.current.style.display = 'block'
+    
     }
 
     const bookMark = ()=>{
-        document.querySelector('.spe-search').classList.remove('tr')
-        document.querySelector('.easy-share').classList.remove('tr')
-        document.querySelector('.sim-book').classList.add('mo')
-        document.querySelector('.info-two-wrapper').style.display = 'none'
-        document.querySelector('.info-three-wrapper').style.display = 'none'
-        document.querySelector('.info-one-wrapper').style.display = 'block'
+        speSearchRef.current.classList.remove('tr')
+        simBookRef.current.classList.add('mo')
+        easyShareRef.current.classList.remove('tr')
+
+        infoTwoRef.current.style.display = 'none'
+        infoThreeRef.current.style.display = 'none'
+        infoOneRef.current.style.display = 'block'
     }
 
   return (
@@ -46,17 +58,21 @@ function Features() {
         </div>
 
         <div className="search">
-            <div className="test">
-                <span className="sim-book mo" onClick={bookMark}>Simple Bookmarking</span>
-                <span className="spe-search" onClick={InteSearch}>Speedy Searching</span>
-                <span className="easy-share" onClick={easySharing}>Easy Sharing</span>
-            </div>    
+            <div className="search-one">
+                <span ref={simBookRef} className="sim-book mo" onClick={bookMark}>Simple Bookmarking</span>
+            </div>  
+            <div className="search-two">
+                <span ref={speSearchRef}className="spe-search" onClick={InteSearch}>Speedy Searching</span>
+            </div>
+            <div className="search-three">
+                <span ref={easyShareRef}className="easy-share" onClick={easySharing}>Easy Sharing</span>
+            </div> 
         </div>
 
-        <div className="info-one-wrapper">
+        <div ref={infoOneRef} className="info-one-wrapper">
             <div className="info-one">
                 <div>
-                    <img src={illust} alt="illustration-features-1"/>
+                    <img src={illust} alt="illustration-features-1" className="illust"/>
                 </div>
                 <div className="info">
                     <h2>Bookmark in one click</h2>
@@ -68,10 +84,10 @@ function Features() {
             </div>
         </div>
 
-        <div className="info-two-wrapper">
+        <div ref={infoTwoRef} className="info-two-wrapper">
             <div className="info-two">
                 <div>
-                    <img src={illust2} alt="illustration-features-2"/>
+                    <img src={illust2} alt="illustration-features-2" className="illust"/>
                 </div>
                 <div className="info">
                     <h2>Intelligent search</h2>
@@ -83,10 +99,10 @@ function Features() {
             </div>
         </div>
 
-        <div className="info-three-wrapper">
+        <div ref={infoThreeRef} className="info-three-wrapper">
             <div className="info-three">
                 <div>
-                    <img src={illust3} alt="illustration-features-3"/>
+                    <img src={illust3} alt="illustration-features-3" className="illust"/>
                 </div>
                 <div className="info"> 
                     <h2>Share your bookmarks</h2>

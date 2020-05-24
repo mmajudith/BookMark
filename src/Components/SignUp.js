@@ -5,20 +5,20 @@ import '../Styles/SignUp.style.scss'
 function SignUp() {
 
   const inputRef = useRef(null)
+  const errorTextRef = useRef(null)
+  const errorRef = useRef(null)
   
   const clickHandler = ()=>{
 
     const regx = /^[\w.]+@\w+\.(com|net|org|oi)$/;
-    const errorTest = document.querySelector('.error-text')
-    const errorImg = document.querySelector('.error')
-    const t = inputRef.current.value
+    const input = inputRef.current.value
     
-    if(regx.test(t)){
+    if(regx.test(input)){
       console.log(inputRef.current.value)
     }else{
       inputRef.current.setAttribute('class', 'inputError')
-      errorTest.style.display = 'block'
-      errorImg.style.display = 'block'
+      errorTextRef.current.style.display = 'block'
+      errorRef.current.style.display = 'block'
     }
   } 
 
@@ -32,8 +32,8 @@ function SignUp() {
       <div className="contact">
         <div className="input-container">
           <input ref={inputRef} type="email" placeholder="Enter your email address"/>
-          <img src={error} alt="error-icon" className="error"/>
-          <p className="error-text">Whoops make sure it's an email</p>
+          <img ref={errorRef} src={error} alt="error-icon" className="error"/>
+          <p ref={errorTextRef} className="error-text">Whoops make sure it's an email</p>
         </div>
 
         <div className="btn-contact"> 

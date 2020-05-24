@@ -44,8 +44,6 @@
                 
             }
             .inputError{
-                padding:10px 50px 10px 10px;
-                margin: 0px 15px 0px 0px;
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
                 border: 2px solid $SoftRed;
@@ -82,11 +80,138 @@
                     border: 2px solid $SoftRed;
                     color: $SoftRed;
                     cursor: pointer;
-                    }
+                }
+        }
+    }
+}
+    @include mQ(1213px){
+        .contact{
+            button{
+                padding: 10px 10px;
+            }
+        } 
+    }
+    @include mQ(1121px){
+        .contact{
+            flex-direction: column;
+            .input-container{
+                .error-text{
+                    margin: 0px 54px 0px 40px;
+                    }  
+                .error{
+                    left: 240px;
+                }     
+            }
+            button{
+                margin-top: 15px;
+            }
+        }
+    }
+    @include mQ(1057px){
+        .contact{
+            .input-container{
+                .error-text{
+                    margin: 0px 42px 0px 34px;
+                    padding: 5px 30px 5px;
+                }   
+                .error{
+                    left: 220px;
+                }  
             }
         }
         
+}
+    @include mQ(900px){
+            .update{
+                width: 60%;
+                margin: auto auto;
+            }
+        .contact{
+            .input-container{
+                input{
+                    width: 70%;
+                    margin: auto auto;
+                }
+                .error{
+                    left: 200px;
+                }
+                .error-text{
+                    width: 70%;
+                    margin: auto auto;
+                }
+            }
+        }
     }
-    
+    @include mQ(500px){
+        .update{
+            width: 90%;
+        }
+    }
+    @include mQ(772px){
+        .contact{
+            .input-container{
+                input{
+                    width: 100%;
+                    margin: auto auto;
+                }
+                .error-text{
+                    width: 100%;
+                    margin: auto auto;
+                }
+            }
+            button{
+                width: 100%;
+                height: 50%;
+                margin-left: 30px;
+            }
+        }
+    }
+    @include mQ(560px){
+        .contact{
+            .input-container{
+                input{
+                    padding-right: 70px;
+                }
+            }
+        }
+    }
+
+    @include mQ(400px){
+            .update{
+                width: 85%;
+                margin: auto auto;
+                font-size: 23px;
+            }
+            .small{
+                padding-bottom: 20px;
+            }
+        .contact{
+            width: 90%;
+            .input-container{
+                width: 90%;
+                input{
+                    width: 78%;
+                    height: 30px;
+                    margin: auto auto;
+                    margin-left: 5px;
+                }
+                .error-text{
+                    width: 90%;
+                    margin: auto auto;
+                    margin-left: 5px;
+                    padding: 5px 20px 5px 26px;
+                }
+                .error{
+                    left: 275px;
+                    top: 17px;
+                }
+            }
+            button{
+                width: 93%;
+                height: 50px;
+                margin: 20px 20px 20px 5px;
+            }
+        }
+    }
 }
 

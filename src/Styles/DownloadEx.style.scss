@@ -76,5 +76,40 @@
             position: relative;
             top: 60px;
         }
+        
+    }
+    @include mQ(860px){
+        .download-text{
+            width: 70%;
+        }
+        .extensions-wrapper{
+            width: 90%;
+            margin: auto auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .chrome-ex, .firefox-ex, .opera-ex{
+                width: 50%;
+                
+            }
+            .firefox-ex{
+                position: relative;
+            }
+            .opera-ex{
+                top: 90px;
+            }
+        }
+    }
+    @include mQ(400px){
+        margin: 90px 0px 200px 0px;
+        .download-text{
+            width: 90%;
+        }
+        .extensions-wrapper{
+            .chrome-ex, .firefox-ex, .opera-ex{
+                width: 80%;   
+            }
+        }
     }
 }

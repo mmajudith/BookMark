@@ -24,6 +24,9 @@
         border-bottom: 1px solid lighten($GrayishBlue, 30);
         padding: 30px 0px;
         font-weight: 600;
+        .search-one, .search-two, .search-three{
+            display: inline;
+        }
         span{
             padding: 26px 54px;
             &:hover{
@@ -36,7 +39,12 @@
             border-bottom: 4px solid $SoftRed;
             
         }
+        .tr{
+            color: lighten($VeryDarkBlue, 10);
+            border-bottom: 4px solid $SoftRed;
+        }
     }
+
     .info-one{
         @include displayFlex;
         .info{
@@ -52,8 +60,9 @@
                     cursor: pointer;
                 }
             }
-        }
-    }
+        }    
+    }    
+
     .info-two-wrapper{
         display: none; 
         .info-two{
@@ -71,10 +80,9 @@
                         cursor: pointer;
                     }
                 }
-            }
-        }
+            } 
+        }      
     }
-    
     .info-three-wrapper{
         display: none;
         .info-three{
@@ -92,13 +100,157 @@
                         cursor: pointer;
                     }
                 }
-            } 
-        }
+            }
+        }         
     }
     
+    @include mQ(1370px){
+        .search{
+            width: 51%;
+        }
+    }
+    @include mQ(1340px){
+        .search{
+            width: 61%;
+        }
+    }
+    @include mQ(1200px){
+        .info-one{
+            .info{
+                margin-top: 40px;
+                margin-left: 50px;
+            }
+        }
+        .info-two-wrapper{
+            .info-two{
+                .info{
+                    margin-top: 40px;
+                    margin-left: 50px;
+                }
+            }
+        }
+        .info-three-wrapper{
+            .info-three{
+                .info{
+                    margin-top: 40px;
+                    margin-left: 50px;
+                }
+            }
+        } 
+    }
+    
+    @include mQ(1121px){
+        .search{
+            width: 80%;
+        }
+    }
+    @include mQ(998px){
+        .info-one{
+            .illust{
+                width: 450px;
+                height: 300px;
+            }
+        }
+    }
+    @include mQ(900px){
+        .info-one{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .info{
+                text-align: center;
+            }
+        }
+        .info-two-wrapper{
+            .info-two{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .info{
+                    text-align: center;
+                }
+            }
+        }
+        .info-three-wrapper{
+            .info-three{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .info{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include mQ(860px){
+        .obj{
+            width: 70%;
+
+        }
+        .search{
+            width: 30%;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border-bottom: none;
+            span{
+                display: block;
+                padding: 26px 24px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    @include mQ(500px){
+        .info-one, .info-two, .info-three{
+            .illust{
+                width: 350px;
+                height: 300px;
+            }
+        }
+    }
+    @include mQ(400px){
+        .obj{
+            width: 90%;
+        }
+        .search{
+            width: 90%;
+            margin: 20px auto;
+            border-bottom: none;
+            .search-one, .search-two, .search-three{
+                display: block;
+                padding: -1px 0px;
+                border-top: 1px solid lighten($GrayishBlue, 30);
+                border-bottom: 1px solid lighten($GrayishBlue, 30);
+                margin: 0px;
+                span{
+                    margin: 0px 70px;
+                }
+            }
+        }
+        .info-one, .info-two, .info-three{
+            text-align: center;
+            width: 90%;
+            .illust{
+                width: 90%;
+                height: 250px;
+            }
+            .info{
+                width: 100%;
+                margin-right: 40px;
+                h2{
+                    margin-right: 15px;
+                }
+                button{
+                    display: none;
+                }
+            }
+            
+        }
+        .info-two, .info-three{
+            .illust{
+                margin-left: 10px;
+            }
+        }
+    }
+
 }
 
-.tr{
-    color: lighten($VeryDarkBlue, 10);
-    border-bottom: 4px solid $SoftRed;
-}

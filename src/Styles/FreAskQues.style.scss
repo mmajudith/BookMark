@@ -19,6 +19,19 @@
             
         }
     }
+    @include mQ(860px){
+        .align-center{
+            width: 70%;
+        }
+    }
+    @include mQ(400px){
+        .align-center{
+            width: 90%;
+            h2{
+                font-size: 28px;
+            }
+        }
+    }
     .que-answer-wrapper{
         width: 35%;
         margin: 40px auto;
@@ -27,6 +40,16 @@
             flex-direction: row;
             justify-content: space-between;
             
+        }
+    }
+    @include mQ(860px){
+        .que-answer-wrapper{
+            width: 70%;
+        }
+    }
+    @include mQ(400px){
+        .que-answer-wrapper{
+            width: 90%;
         }
     }
     .Bmark-explaned, .req-browser, .mobile-app,.chromium {

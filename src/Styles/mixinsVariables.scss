@@ -32,3 +32,9 @@ $White: #FFF;
     line-height: 20px;
     letter-spacing: 1px;
 }
+
+@mixin mQ($arg){
+    @media screen and (max-width: $arg){
+        @content;
+    }    
+}
