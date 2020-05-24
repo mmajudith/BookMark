@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BookMark/static/css/main.5f9ecee8.chunk.css",
+    "main.css": "/BookMark/static/css/main.68880593.chunk.css",
     "main.js": "/BookMark/static/js/main.da249b3a.chunk.js",
     "main.js.map": "/BookMark/static/js/main.da249b3a.chunk.js.map",
     "runtime-main.js": "/BookMark/static/js/runtime-main.d776a2f1.js",
@@ -8,9 +8,9 @@
     "static/js/2.49878d5d.chunk.js": "/BookMark/static/js/2.49878d5d.chunk.js",
     "static/js/2.49878d5d.chunk.js.map": "/BookMark/static/js/2.49878d5d.chunk.js.map",
     "index.html": "/BookMark/index.html",
-    "precache-manifest.1a0d6bbc7152a2de3fd87a6e2da2c920.js": "/BookMark/precache-manifest.1a0d6bbc7152a2de3fd87a6e2da2c920.js",
+    "precache-manifest.51eefc05d1197907e354988bbc543467.js": "/BookMark/precache-manifest.51eefc05d1197907e354988bbc543467.js",
     "service-worker.js": "/BookMark/service-worker.js",
-    "static/css/main.5f9ecee8.chunk.css.map": "/BookMark/static/css/main.5f9ecee8.chunk.css.map",
+    "static/css/main.68880593.chunk.css.map": "/BookMark/static/css/main.68880593.chunk.css.map",
     "static/js/2.49878d5d.chunk.js.LICENSE.txt": "/BookMark/static/js/2.49878d5d.chunk.js.LICENSE.txt",
     "static/media/App.css": "/BookMark/static/media/bg-simplify-section-desktop.89670fa9.svg",
     "static/media/icon-arrow.svg": "/BookMark/static/media/icon-arrow.38993f94.svg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.d776a2f1.js",
     "static/js/2.49878d5d.chunk.js",
-    "static/css/main.5f9ecee8.chunk.css",
+    "static/css/main.68880593.chunk.css",
     "static/js/main.da249b3a.chunk.js"
   ]
 }
