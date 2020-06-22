@@ -176,7 +176,9 @@
         .headerNavOpen{
             width: 100vw;
             height: 100vh;
-            background-color: hsl(229, 31%, 21%);
+            position: absolute;
+            z-index: 1;
+            background-color: hsla(229, 31%, 21%, .9);
             .logo{
                 position: relative;
                 width: 90vw;
@@ -214,7 +216,7 @@
                         color: $White;
                     }
                     .login{
-                        background-color: $VeryDarkBlue;
+                        background-color: hsla(229, 31%, 21%, .10);
                         border:2px solid $White; 
                     }
                 }
@@ -242,6 +244,7 @@
             }
         }
         .simple-illust-wrapper{
+            z-index: 0;
             .simp-bookmark{
                 width: 100%;
                 margin: auto auto;
